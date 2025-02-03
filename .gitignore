@@ -31,3 +31,6 @@ logs
 /public/uploads
 pruvious.db
 pruvious.db-journal
+
+# Local Netlify folder
+.netlify

@@ -1,6 +1,6 @@
 [functions]
-included_files = ["node_modules/@img/**/*", "node_modules/@img/**/*"]
+included_files = ["node_modules/@img/**/*"]
 external_node_modules = ["sharp"]
 
-[build]
-command = "npm i --os=linux --cpu=x64 sharp@0.32 --ignore-engines && npm run build"
+# [build]
+# command = "npm i --os=linux --cpu=x64 sharp@0.32 --ignore-engines && npm run build"
