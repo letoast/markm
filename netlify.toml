@@ -2,6 +2,6 @@
 # included_files = ["node_modules/@img/**/*"]
 # external_node_modules = ["sharp"]
 
-# [build]
+[build]
 # command = "npm install --platform=linux --arch=x64 sharp@0.32.6 --ignore-engines && npm run build"
-command = "npm install --platform=linux --arch=x64 sharp@0.32.6 && npm run build"
+command = "npm install --cpu=x64 --os=linux --libc=glibc sharp@0.32.6 && npm run build"
