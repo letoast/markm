@@ -3,6 +3,15 @@ export default defineNuxtConfig({
 	modules: ['@nuxt/ui', 'pruvious', '@nuxt/eslint', 'nuxt-lazytube'],
 	devtools: { enabled: true },
 	compatibilityDate: '2024-11-01',
+	vite: {
+		build: {
+			rollupOptions: {
+				external: [
+					'sharp',
+				],
+			},
+		},
+	},
 	eslint: {
 		config: {
 			stylistic: {
