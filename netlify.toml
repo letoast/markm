@@ -1,7 +1,7 @@
 [functions]
 external_node_modules = ["sharp"]
-included_files = ["node_modules/sharp/**/*"]
-# included_files = ["node_modules/@img/**/*"]
+# included_files = ["node_modules/sharp/**/*"]
+included_files = ["node_modules/@img/**/*"]
 
 [build]
 # command = "npm install --platform=linux --arch=x64 sharp@0.32.6 --ignore-engines && npm run build"
