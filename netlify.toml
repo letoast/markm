@@ -15,5 +15,5 @@ external_node_modules = ["sharp"]
 included_files = ["node_modules/sharp/**/*"]
 # included_files = ["node_modules/@img/**/*"]
 
-# [build]
-# command = "rm -rf package-lock.json node_modules/ && npm install --os=linux --cpu=x64 sharp && npm run build"
+[build]
+command = "rm -rf package-lock.json node_modules/ && npm install --os=linux --cpu=x64 sharp && npm run build"
