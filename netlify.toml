@@ -7,4 +7,5 @@ included_files = ["./node_modules/@img/**/*"]
 # command = "npm install --platform=linux --arch=x64 sharp@0.32.6 --ignore-engines && npm run build"
 # command = "rm -rf package-lock.json .node_modules/ && npm install --ignore-scripts=false --foreground-scripts --verbose --cpu=x64 --os=linux --libc=glibc sharp@0.32.6 && npm rebuild --verbose sharp && npm run build"
 # command = "rm -rf package-lock.json .node_modules/ && npm install --ignore-scripts=false --foreground-scripts --verbose --platform=linux --arch=x64 sharp@0.32.6 && npm rebuild --verbose sharp && npm run build"
-command = "rm -rf package-lock.json .node_modules/ && npm install --ignore-scripts=false --foreground-scripts --verbose sharp@npm:@img/sharp-linux-x64 && npm run build"
+# command = "rm -rf package-lock.json .node_modules/ && npm install --ignore-scripts=false --foreground-scripts --verbose sharp@npm:@img/sharp-linux-x64 && npm run build"
+command = "rm -rf package-lock.json .node_modules/ && npm install --cpu=x64 --os=linux --libc=glibc sharp && npm install --cpu=x64 --os=linux --libc=musl sharp && npm run build"
