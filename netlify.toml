@@ -15,4 +15,4 @@ external_node_modules = ["sharp"]
 included_files = ["node_modules/sharp/**/*"]
 
 [build]
-command = "rm -rf package-lock.json node_modules/ && npm install --ignore-scripts=false --foreground-scripts --verbose sharp && npm run build"
+command = "npm install sharp@npm:@img/sharp-linux-x64 && npm run build"
