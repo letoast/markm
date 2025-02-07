@@ -11,9 +11,9 @@
 # command = "rm -rf package-lock.json .node_modules/ && npm install --cpu=x64 --os=linux --libc=glibc sharp && npm install --cpu=x64 --os=linux --libc=musl sharp && npm run build"
 
 [functions]
-node_bundler = "esbuild"
-external_node_modules = ["sharp"]
-included_files = ["node_modules/sharp/**/*"]
+# node_bundler = "esbuild"
+# external_node_modules = ["sharp"]
+included_files = ["./node_modules/sharp/**/*"]
 # included_files = ["node_modules/@img/**/*"]
 
 # [build]
