@@ -34,6 +34,7 @@ export default defineNuxtConfig({
 				key: process.env.S3_KEY as string,
 				region: process.env.S3_REGION as string,
 				secret: process.env.S3_SECRET as string,
+				forcePathStyle: true,
 			},
 		},
 	},
