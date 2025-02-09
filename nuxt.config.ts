@@ -20,9 +20,9 @@ export default defineNuxtConfig({
 		},
 	},
 	pruvious: {
-		database: 'postgresql://postgres.qgjwxwzxmnfoyliknaly:HahaLala25!@aws-0-us-west-1.pooler.supabase.com:6543/postgres',
+		database: process.env.PG as string,
 		jwt: {
-			secretKey: 'tjEPg4NPj9Uq7IB1BTrpKHRFVqqxoO4lcpqdLIO8MwvNjLMisa7LgeNU4cJUfbK7',
+			secretKey: process.env.JWT_SECRET as string,
 		},
 		pageCache: false,
 		uploads: {
