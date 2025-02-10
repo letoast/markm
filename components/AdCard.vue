@@ -33,6 +33,7 @@ defineProps<{
 				aspect-ratio="4:5"
 				class="h-full"
 				:custom-thumbnail="ad?.image?.src"
+				:show-title="false"
 			>
 				<template #button>
 					<div
