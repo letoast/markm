@@ -2,10 +2,10 @@
 export default defineNuxtConfig({
 	modules: ['@nuxt/ui', 'pruvious', '@nuxt/eslint', 'nuxt-lazytube'],
 	devtools: { enabled: true },
-	routeRules: {
-		// Products page generated on demand, revalidates in background, cached until API response changes
-		'/': { swr: true },
-	},
+	// routeRules: {
+	// 	// Products page generated on demand, revalidates in background, cached until API response changes
+	// 	'/': { swr: true },
+	// },
 	compatibilityDate: '2024-11-01',
 	vite: {
 		build: {
