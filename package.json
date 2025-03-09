@@ -106,6 +106,7 @@
 		"@nuxt/module-builder": "^0.8.1",
 		"@nuxt/schema": "^3.15.2",
 		"@nuxt/test-utils": "^3.13.1",
+		"@tailwindcss/typography": "^0.5.16",
 		"@types/accept-language-parser": "^1.5.6",
 		"@types/babel__generator": "^7.6.8",
 		"@types/bytes": "^3.1.4",

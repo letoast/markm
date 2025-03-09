@@ -15,8 +15,8 @@ defineProps<{
 		:ui="{
 			strategy: 'override',
 			ring: 'ring-1 ring-gray-200',
-			shadow: 'shadow-lg',
-			base: 'overflow-hidden',
+			shadow: 'shadow-lg hover:shadow-3xl',
+			base: 'overflow-hidden hover:scale-105 transition-all duration-100 ease-out',
 			body: {
 				base: 'grid',
 				padding: 'p-0',
@@ -37,7 +37,7 @@ defineProps<{
 			>
 				<template #button>
 					<div
-						class="p-20 bg-primary flex items-center justify-center w-full h-full rounded-xl"
+						class="p-20 bg-transparent flex items-center justify-center w-full h-full rounded-xl"
 					>
 						<UIcon name="tabler:player-play-filled" />
 					</div>
