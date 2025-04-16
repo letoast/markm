@@ -28,9 +28,12 @@ export default defineCollection({
 			},
 		},
 		tags: {
-			type: 'record',
+			type: 'records',
 			options: {
 				collection: 'tags',
+				fields: {
+					title: true,
+				},
 				placeholder: 'Add tags',
 				required: false,
 			},

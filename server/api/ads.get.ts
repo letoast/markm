@@ -13,13 +13,26 @@ export default defineEventHandler(async (event) => {
 	//     return "The 'page' query parameter must be a positive integer"
 	//   }
 
-	const result = await query('ads')
-		.select(['title', 'video', 'image', 'id'])
+	// const tags = await query('tags')
+	// 	.select({
+	// 		id: true,
+	// 		title: true,
+	// 	})
+	// 	.populate()
+
+	const ads = await query('ads')
+		.select({
+			title: true,
+			video: true,
+			image: true,
+			id: true,
+			tags: true,
+		})
 		.where('status', '=', 'published')
 		.populate()
 		.paginate(1, 100)
 
 	return {
-		...result,
+		...ads,
 	}
 })

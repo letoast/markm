@@ -1,48 +1,63 @@
 <script setup lang="ts">
-import type { Image } from '#pruvious'
+import { motion } from 'motion-v'
+import type { InternalApi } from 'nitropack/types'
 
 defineProps<{
-	ad: {
-		title: string
-		video: string
-		image: Image | null
-	}
+	ad: InternalApi['/api/ads']['get']['records'][number]
 }>()
 </script>
 
 <template>
-	<UCard
-		:ui="{
-			strategy: 'override',
-			ring: 'ring-1 ring-gray-200',
-			shadow: 'shadow-lg hover:shadow-3xl',
-			base: 'overflow-hidden hover:scale-105 transition-all duration-100 ease-out',
-			body: {
-				base: 'grid',
-				padding: 'p-0',
-			},
-		}"
+	<motion.div
+		class="box"
+		:while-hover="{ scale: 1.1 }"
 	>
-		<template #header>
-			{{ ad.title }}
-		</template>
-
-		<div>
-			<LazyYoutube
-				:src="ad.video"
-				aspect-ratio="4:5"
-				class="h-full"
-				:custom-thumbnail="ad?.image?.src"
-				:show-title="false"
-			>
-				<template #button>
-					<div
-						class="p-20 bg-transparent flex items-center justify-center w-full h-full rounded-xl"
+		<UCard
+			:ui="{
+				body: 'p-0 sm:p-0',
+				root: 'overflow-hidden shadow-xl',
+			}"
+		>
+			<template #header>
+				<div>
+					{{ ad.title }}
+				</div>
+				<div class="flex flex-wrap gap-2">
+					<UButton
+						v-for="tag in ad.tags"
+						:key="tag?.title"
+						variant="soft"
+						size="xs"
 					>
-						<UIcon name="tabler:player-play-filled" />
-					</div>
-				</template>
-			</LazyYoutube>
-		</div>
-	</UCard>
+						{{ tag?.title }}
+					</UButton>
+				</div>
+			</template>
+
+			<div>
+				<ScriptYouTubePlayer
+					class="h-full"
+					:video-id="ad.video"
+				>
+					<!-- <template #placeholder>
+						<PruviousImage
+							:src="ad.image"
+							aspect-ratio="4:5"
+							class="h-full"
+						/>
+					</template> -->
+					<!-- <template #awaitLoading>
+						<div
+							class="
+								flex h-full w-full items-center justify-center rounded-xl bg-transparent
+								p-20
+							"
+						>
+							<UIcon name="tabler:player-play-filled" />
+						</div>
+					</template> -->
+				</ScriptYouTubePlayer>
+			</div>
+		</UCard>
+	</motion.div>
 </template>
