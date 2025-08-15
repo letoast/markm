@@ -7,7 +7,7 @@
     "dev": "pruvious dev --host",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "postinstall": "npm rebuild sharp --platform=linux --arch=x64 && nuxt prepare",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
