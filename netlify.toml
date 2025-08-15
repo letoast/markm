@@ -1,0 +1,2 @@
+[build]
+  command = "pnpm remove sharp && pnpm add sharp@^0.33.0 --platform=linux --arch=x64 && pnpm run build"
